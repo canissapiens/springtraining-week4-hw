@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>All cars list</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="css/bootstrap.min.css">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" th:href="@{/css/starter-template.css}">
+</head>
+<body>
+<main role="main" class="container">
+    <div class="starter-template">
+        <h1>Your car here!</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4" style="background-color: #7abaff">
+            <p>Hello <span th:text="${name}"></span></p>
+
+            <table th:class="table">
+                <tr >
+                    <td th:text="${car.id}"></td>
+                    <td th:text="${car.mark}"></td>
+                    <td th:text="${car.model}"></td>
+                    <td th:text="${car.color}"></td>
+                </tr>
+            </table>
+            <br/>
+
+            <br/>
+            <table>
+                <tr>
+                    <td>
+                        <form th:action="@{/cars/gui}" th:method="get">
+                            <button type="submit" class="btn btn-outline-danger">Powrót</button>
+                        </form>
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+            <br/>
+        </div><!-- column -->
+    </div><!-- row -->
+
+
+</main>
+<script th:src="@{/js/jquery-3.3.1.slim.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

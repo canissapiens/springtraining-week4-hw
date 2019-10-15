@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Hello <span th:text="${name}"></span></p>
+
+<p th:text="${car.getMark()}"></p>
+<p th:text="${car.getModel()}"></p>
+<p>For complete car list go to: <a href="/cars">/cars</a></p>
+</body>
+</html>
